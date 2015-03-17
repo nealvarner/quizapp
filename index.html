@@ -5,21 +5,29 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500,300">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link href="/Users/nealvarner/Downloads/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link rel="shortcut icon" type="image/x-icon"  href="images/favicon.ico">
+    <!-- JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Utah Quizzing</title>
 </head>
 <body>
     <nav class="top-header">The Quiz of Utah</nav>
-    <div class="question-holder">
-        <span class="question">What is the average depth of the Great Salt Lake?</span><br><br>
-        <input type="radio" name="option" class="option" value="0"><span class="answer">68 Feet</span><br>
-        <input type="radio" name="option" class="option" value="1"><span class="answer">53 Feet</span><br>
-        <input type="radio" name="option" class="option" value="2"><span class="answer">27 Feet</span><br>
-        <input type="radio" name="option" class="option" value="3"><span class="answer">13 Feet</span><br>
-    <div class="button-holder">
-        <input type="button" class="sub-button" id="submit" value="Next Question">
-        <input type="button" class="sub-button" id="start-over" value="Start Over">
+    <div class="question-section">
+        <div class="question-wrapper">
+            <span class="question">What is the average depth of the Great Salt Lake?</span><br><br>
+
+            <div class="answer-holder">
+                <input type="radio" name="option" class="option" value="0"><span class="answer">68 Feet</span><br>
+                <input type="radio" name="option" class="option" value="1"><span class="answer">53 Feet</span><br>
+                <input type="radio" name="option" class="option" value="2"><span class="answer">27 Feet</span><br>
+                <input type="radio" name="option" class="option" value="3"><span class="answer">13 Feet</span><br>
+            </div>
+        </div>
+        <div class="button-holder">
+            <input type="button" class="sub-button" id="submit-button" value="Next Question">
+            <input type="button" class="sub-button" id="start-over" value="Start Over">
+        </div>
     </div>
 </body>
 </html>

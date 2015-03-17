@@ -96,18 +96,18 @@ body, a {
     overflow: auto;
 }
 
-.question-holder {
+.question-section {
     margin-top: 17.5em;
     color: black;
     font-weight: 300;
     text-align: center;
 }
 
-.question-holder > .question span {
+.question-section > .question span {
     font-size: 3.125em;
 }
 
-.question-holder > .answer h3 {
+.question-section > .answer h3 {
     margin-top: 1.25rem;
     font-size: 1.56rem;
 }
@@ -132,7 +132,7 @@ body, a {
     cursor: pointer;
 }
 
-input#submit {
+input#submit-button {
     display: inline-block;
 }
 
