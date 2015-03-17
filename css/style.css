@@ -1,0 +1,142 @@
+ /*http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* DEBUG */
+/*body {
+    background-color: LightGray;
+}
+
+div {
+    border: 1px solid Chocolate;
+}*/
+
+/* Font Smoothing */
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+body, a {
+    /*Typography Declarations*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #838994;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    min-width: 95em;
+}
+/* Navigation Section */
+
+.top-header {
+    background-color: #fff;
+    width: 100%;
+    min-width: 95em;
+    /*position: fixed;*/
+    z-index: 9999;
+    height: 5em;
+    border-bottom: 1px solid LightGray;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 1em;
+}
+
+.question-holder {
+    /*background-image: url("http://images.nationalgeographic.com/wpf/media-live/photos/000/020/cache/arches-camping_2030_600x450.jpg");*/
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    height: 15rem;
+    overflow: auto;
+}
+
+.question-holder {
+    margin-top: 17.5em;
+    color: black;
+    font-weight: 300;
+    text-align: center;
+}
+
+.question-holder > .question span {
+    font-size: 3.125em;
+}
+
+.question-holder > .answer h3 {
+    margin-top: 1.25rem;
+    font-size: 1.56rem;
+}
+
+.sub-button {
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 16px 26px;
+    line-height: 1.33;
+    margin: 0 auto;
+    color: white;
+    background-color: #f15a29;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    width: 175px;
+}
+
+.sub-button:hover {
+    background-color: #d9400e;
+    border-color: #cf3d0e;
+    cursor: pointer;
+}
+
+input#submit {
+    display: inline-block;
+}
+
+input#start-over {
+    display: none;
+}
+
