@@ -40,39 +40,55 @@ $(document).ready(function() {
     ];
 
     $('input#submit-button').click(function() {
-        current_question++;
+        if ($('input[type="radio"]:checked').val()) {
+            check_answer();
+            current_question++;
+            next_question();
+        } else {
+            alert("You've got to pick an answer.");
+        }
+    });
+
+    $('input#start-over').click(function() {
+        current_question = 0;
+        number_correct = 0;
+        $(".question").remove();
         next_question();
+        $('input#submit-button').css('display', 'inline-block');
+        $('input#start-over').css('display', 'none');
     });
 
     function next_question() {
         // check for correct answer
-
+        $(".question").remove();
         // move to next question
-        if (next_question > 4) {
+        if (current_question > 4) {
             // show stats prompt to start over
             // how many got correct
-
+            var quiz_result = "<span>You got "+number_correct+" out of "+current_question+" correct!</span>"
+            $('.question-wrapper').html(quiz_result);
             // switch buttons
+            $('input#submit-button').css('display', 'none');
+            $('input#start-over').css('display', 'inline-block');
         }
         else {
             // change elements to current question
-            $(".question").remove();
             add_question_block();
         }
     }
 
     function check_answer() {
-    }
-
-    function remove_current_content() {
-        $(".question").remove();
+        var checked_answer = $("input[type='radio']:checked").val()
+        if (checked_answer == quiz_questions[current_question].correct_answer_index) {
+            number_correct++;
+        }
     }
 
     function add_question_block() {
         var q_block = '<span class="question">'+quiz_questions[current_question].question+
                         '</span><br><br><div class="answer-holder">';
         for (var i = 0; quiz_questions[current_question].answers.length > i; i++) {
-            q_block += '<input type="radio" name="option" class="option" value=i><span class="answer">'+quiz_questions[current_question].answers[i]+'</span><br>';
+            q_block += '<input type="radio" name="option" class="option" value='+i+'><span class="answer">'+quiz_questions[current_question].answers[i]+'</span><br>';
         };
          q_block += '</div>';
          $('.question-wrapper').html(q_block);
